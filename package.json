@@ -1,0 +1,26 @@
+{
+  "name": "devops-api",
+  "version": "1.0.0",
+  "description": "Full DevOps-API project",
+  "homepage": "https://github.com/Co-den/DevOps-API#readme",
+  "bugs": {
+    "url": "https://github.com/Co-den/DevOps-API/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Co-den/DevOps-API.git"
+  },
+  "license": "ISC",
+  "author": "agugbue ikenna",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.1",
+    "express": "^5.2.1",
+    "nodemon": "^3.1.14"
+  }
+}
