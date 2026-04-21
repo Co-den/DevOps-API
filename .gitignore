@@ -25,7 +25,7 @@ Thumbs.db
 
 # Optional: package lock (only if needed)
 package-lock.json
-
+skills-lock.json
 # Coverage
 coverage/
 
