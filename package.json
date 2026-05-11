@@ -14,6 +14,16 @@
   "author": "agugbue ikenna",
   "type": "module",
   "main": "src/index.js",
+  "imports": {
+    "#config/*": "./src/config/*",
+    "#controllers/*": "./src/controllers/*",
+    "#middlewares/*": "./src/middlewares/*",
+    "#models/*": "./src/models/*",
+    "#routes/*": "./src/routes/*",
+    "#services/*": "./src/services/*",
+    "#validations/*": "./src/validations/*",
+    "#utils/*": "./src/utils/*"
+  },
   "scripts": {
     "dev": "nodemon src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -26,11 +36,21 @@
     "db:studio": "drizzle-kit studio --config=drizzle.config.js"
   },
   "dependencies": {
+    "@arcjet/inspect": "^1.4.0",
+    "@arcjet/node": "^1.4.0",
     "@neondatabase/serverless": "^1.1.0",
+    "bcrypt": "^6.0.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
     "dotenv": "^17.4.1",
     "drizzle-orm": "^0.45.2",
     "express": "^5.2.1",
-    "nodemon": "^3.1.14"
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.3",
+    "morgan": "^1.10.1",
+    "nodemon": "^3.1.14",
+    "winston": "^3.19.0",
+    "zod": "^4.4.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.4",
