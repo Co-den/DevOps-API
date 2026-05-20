@@ -1,5 +1,3 @@
-
-
 export const cookies = {
   getOptions: () => ({
     httpOnly: true,
