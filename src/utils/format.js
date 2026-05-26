@@ -1,5 +1,3 @@
- 
- 
 const formatValidationError = (errors) => {
   if (!errors || !errors.issues) return "validation failed";
 
@@ -8,6 +6,5 @@ const formatValidationError = (errors) => {
 
   return JSON.stringify(errors);
 };
-
 
 export default formatValidationError;

@@ -15,6 +15,7 @@
   "type": "module",
   "main": "src/index.js",
   "imports": {
+    "#src/*": "./src/*",
     "#config/*": "./src/config/*",
     "#controllers/*": "./src/controllers/*",
     "#middlewares/*": "./src/middlewares/*",
@@ -23,11 +24,12 @@
     "#services/*": "./src/services/*",
     "#validations/*": "./src/validations/*",
     "#utils/*": "./src/utils/*"
+    
   },
   "scripts": {
     "dev": "nodemon src/index.js",
     "start": "node src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "cross-env NODE_ENV=test NODE_OPTIONS=--experimental-vm-modules jest",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "format": "prettier --write .",
@@ -61,6 +63,8 @@
     "eslint": "^9.39.4",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.5",
-    "prettier": "^3.8.2"
+    "jest": "^30.4.2",
+    "prettier": "^3.8.2",
+    "supertest": "^7.2.2"
   }
 }

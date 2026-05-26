@@ -79,4 +79,3 @@ export const verifyCredentials = async (email, password) => {
     throw error;
   }
 };
-
