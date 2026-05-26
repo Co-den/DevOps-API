@@ -24,7 +24,6 @@
     "#services/*": "./src/services/*",
     "#validations/*": "./src/validations/*",
     "#utils/*": "./src/utils/*"
-    
   },
   "scripts": {
     "dev": "nodemon src/index.js",
@@ -47,6 +46,7 @@
     "bcrypt": "^6.0.0",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.6",
+    "cross-env": "^10.1.0",
     "dotenv": "^17.4.1",
     "drizzle-orm": "^0.45.2",
     "express": "^5.2.1",
