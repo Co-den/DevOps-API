@@ -44,3 +44,39 @@ export const createUser = async ({ name, email, password, role = "user" }) => {
     throw new Error("Error creating the user");
   }
 };
+
+// Verify user credentials and return user data
+export const verifyCredentials = async (email, password) => {
+  try {
+    const userResult = await db
+      .select()
+      .from(users)
+      .where(eq(users.email, email))
+      .limit(1);
+
+    if (userResult.length === 0) {
+      throw new Error("Invalid email or password");
+    }
+
+    const user = userResult[0];
+    const isPasswordValid = await bcrypt.compare(password, user.password);
+
+    if (!isPasswordValid) {
+      throw new Error("Invalid email or password");
+    }
+
+    logger.info(`User ${email} authenticated successfully`);
+    return {
+      id: user.id,
+      name: user.name,
+      email: user.email,
+      role: user.role,
+    };
+  } catch (error) {
+    logger.warn(`Authentication failed for email: ${email}`, {
+      error: error.message,
+    });
+    throw error;
+  }
+};
+
