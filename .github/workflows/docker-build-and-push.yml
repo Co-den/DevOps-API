@@ -10,17 +10,20 @@ on:
     branches:
       - main
   workflow_dispatch:
+
 env:
   REGISTRY: docker.io
-  IMAGE_NAME: ${{secrets.DOCKER_USERNAME}}/devops-api:main
+  IMAGE_NAME: ${{ secrets.DOCKER_USERNAME }}/devops-api
 
 jobs:
   docker:
     runs-on: ubuntu-latest
     timeout-minutes: 30
+
     permissions:
       contents: read
       packages: write
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
