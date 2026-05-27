@@ -29,10 +29,10 @@ describe("API Endpoint", () => {
 });
 
 describe("API Endpoint", () => {
-  describe("GET /nonexistent", () => {
+  describe("GET /nonexsistent", () => {
     it("should return 404 for nonexistent route", async () => {
       const response = await request(app)
-        .get("/nonexistent")
+        .get("/nonexsistent")
         .set("User-Agent", "Mozilla/5.0");
 
       // Either 404 (if not rate limited) or 429 (if rate limited due to security middleware)
