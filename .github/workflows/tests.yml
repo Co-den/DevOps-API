@@ -8,6 +8,8 @@ on:
     branches:
       - main
   workflow_dispatch:
+env:
+  DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
 jobs:
   test:
